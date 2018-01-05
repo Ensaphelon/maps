@@ -9,6 +9,7 @@ export class MapContainer extends Component {
   static defaultProps = {
     center: { lat: 59.95, lng: 30.33 },
     zoom: 11,
+    google: null,
   };
   /**
    * Setting initial state.
@@ -154,7 +155,7 @@ export class MapContainer extends Component {
 }
 
 MapContainer.propTypes = {
-  google: PropTypes.object.isRequired,
+  google: PropTypes.object,
   center: PropTypes.object,
   zoom: PropTypes.number,
   items: PropTypes.array.isRequired,
